@@ -1,0 +1,272 @@
+:root {
+  --green: hsl(171, 66%, 44%);
+  --blue: hsl(233, 100%, 69%);
+  --headers: hsl(210, 10%, 33%);
+  --text: hsl(201, 11%, 66%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.167), rgba(255, 255, 255, 0.173)), url(images/bg-header-desktop.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.hero .hero-dis {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 10px;
+  text-align: center;
+}
+
+.hero-dis h1 {
+  color: var(--headers);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 500;
+}
+
+.hero-dis p {
+  max-width: 530px;
+  color: var(--text);
+  padding: 10px 5px;
+  font-weight: 300;
+}
+
+.hero-but,
+.footer .footer-dis .hero-but {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.hero-but .ios,
+.hero-but .mac,
+.footer .footer-dis .hero-but .ios,
+.footer .footer-dis .hero-but .mac {
+  width: 200px;
+  height: 50px;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-but .ios,
+.footer .footer-dis .hero-but .ios {
+  background-color: var(--green);
+  box-shadow: 1px 1px 10px var(--green);
+  transition: 0.3s;
+}
+
+.hero-but .mac,
+.footer .footer-dis .hero-but .mac {
+  background-color: var(--blue);
+  box-shadow: 1px 1px 10px var(--blue);
+  transition: 0.3s;
+}
+
+.hero-but .ios:hover,
+.footer .footer-dis .hero-but .ios:hover {
+  background-color: hsla(171, 66%, 44%, 0.7);
+}
+
+.hero-but .mac:hover,
+.footer .footer-dis .hero-but .mac:hover {
+  background-color: hsla(233, 100%, 69%, 0.7);
+}
+
+.hero-but a,
+.footer .footer-dis .hero-but a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+/* Main Sections */
+.track,
+.clipboard,
+.workflow,
+.footer .footer-dis {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.track-dis h2,
+.workflow-dis h2,
+.footer-dis h2,
+.clipboard-dis h2 {
+  font-size: 2rem;
+  color: var(--headers);
+}
+
+.track-dis p,
+.workflow-dis p,
+.footer-dis p,
+.clipboard-dis p {
+  color: var(--text);
+  max-width: 550px;
+  padding: 20px 0;
+}
+
+/* Track Section */
+.track .proper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.track .proper img {
+  max-width: 100%;
+}
+
+.track .proper-dis {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.track .quick h3 {
+  color: var(--headers);
+  font-size: 1.4rem;
+}
+
+.track .quick p {
+  color: var(--text);
+  max-width: 300px;
+}
+
+/* Clipboard Section */
+.clipboard {
+  min-height: auto;
+}
+
+/* Workflow Section */
+.workflow-proper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.workflow-contant {
+  max-width: 300px;
+}
+
+.workflow-contant h3 {
+  color: var(--headers);
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.workflow-contant p {
+  color: var(--text);
+  font-weight: 300;
+}
+
+/* Icons Section */
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  flex-wrap: wrap;
+  margin: 100px 0;
+}
+
+/* Footer */
+footer {
+  background-color: hsla(202, 11%, 66%, 0.1);
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+footer img {
+  width: 70px;
+}
+
+.footer-contant {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-contant a {
+  color: var(--headers);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-contant a:hover {
+  color: var(--green);
+}
+
+.socila-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.socila-icon img {
+  width: 30px;
+  transition: 0.3s;
+}
+
+.socila-icon img:hover {
+  filter: brightness(0) saturate(100%) invert(51%) sepia(92%) saturate(383%) hue-rotate(121deg) brightness(93%) contrast(92%);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.167), rgba(255, 255, 255, 0.173)), url(images/bg-header-mobile.png);
+    background-size: cover;
+    padding: 40px 10px;
+  }
+
+  .track .proper {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .workflow-proper {
+    flex-direction: column;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .socila-icon {
+    position: static;
+  }
+}
